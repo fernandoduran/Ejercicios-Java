@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class EjemploArrayBidimensional4 {
+
+	public static void main(String[] args) {
+		/*
+		 * Programa que guarde en un array la lista de meses del año y el número de días que tienen (considerando que febrero
+		 * siempre tiene 28 días). Después, se pedirá al usuario que escriba el nombre de un mes y el programa le responderá 
+		 * con el nombre de días
+		 */
+		
+		Scanner sc = new Scanner(System.in);
+		String mes;
+		String arrayMesesDias[][] = {
+				{"Enero", "31"}, {"Febrero", "28"}, {"Marzo", "31"}, {"Abril", "30"}, {"Mayo", "31"}, {"Junio", "30"},
+				{"Julio", "31"}, {"Agosto", "31"}, {"Septiembre", "30"}, {"Octubre", "31"}, {"Noviembre", "30"}, {"Diciembre", "31"}
+		};
+		
+		System.out.print("Elige el mes del que quieres saber su número de dias: ");
+		mes = sc.nextLine();
+		for(int i = 0; i < arrayMesesDias.length; i++){
+
+			if(mes.equals(arrayMesesDias[i][0])){
+				System.out.println("El mes "+mes+" tiene "+arrayMesesDias[i][1]);
+			}
+		}
+
+	}
+
+}

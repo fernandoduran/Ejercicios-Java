@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class EjemploArraysBidimensionales3 {
+
+	public static void main(String[] args) {
+		/*
+		 * Programa que lea el nombre y precio de tres artículos y los actualice añadiéndoles el 21% del IVA a todos.
+		 * Finalmente mostrará una lista con los nombres y precios actualizados de todos.
+		 */
+		Scanner sc = new Scanner(System.in);
+		
+		String arrayPreciosIVA[][]= new String[3][2];
+		float precio = 0;
+		double IVA = 0.21;
+		
+		for(int i = 0; i < arrayPreciosIVA.length; i++){
+			System.out.print("Introduce el nombre del producto "+i+": ");
+			arrayPreciosIVA[i][0] = sc.next();
+			
+			System.out.print("Introduce el precio del producto "+i+": ");
+			precio = Float.parseFloat(sc.next());
+			precio  = (float) (precio * IVA) + precio;
+			
+			arrayPreciosIVA[i][1] = String.valueOf(precio);
+		}
+		System.out.println("====================Lista de precios====================\n");
+		
+		for(int i = 0; i < arrayPreciosIVA.length; i++){
+			System.out.println("El artículo "+arrayPreciosIVA[i][0]+" es de "+arrayPreciosIVA[i][1]+"€");
+		}
+	}
+
+}

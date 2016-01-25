@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class Ejercicio16 {
+
+	public static void main(String[] args) {
+		String arrayNotasAlumnos[][] = new String[3][4];
+		
+		Scanner sc = new Scanner(System.in);
+
+		for(int i = 0; i < arrayNotasAlumnos.length; i++){
+			System.out.println("Nombre del alumno "+i+": ");
+			arrayNotasAlumnos[i][0] = sc.nextLine();
+			
+			System.out.print("Nota de los examenes del alumno "+i+": ");
+			arrayNotasAlumnos[i][1] = sc.nextLine();
+			
+			System.out.print("Nota de los trabajos del alumno "+i+": ");
+			arrayNotasAlumnos[i][2] = sc.nextLine();
+			
+			System.out.println("Nota de la actitud del alumno"+i+": ");
+			arrayNotasAlumnos[i][3] = sc.nextLine();
+		}
+
+	}
+
+}

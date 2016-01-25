@@ -1,0 +1,34 @@
+import java.util.Scanner;
+public class Ejercicio16 {
+
+	public static void main(String[] args) {
+		String arrayNotasAlumnos[][] = new String[3][4];
+		
+		Scanner sc = new Scanner(System.in);
+		float nota1, nota2, nota3, media;
+
+		for(int i = 0; i < arrayNotasAlumnos.length; i++){
+			System.out.println("================Notas alumnos===================\n");
+			System.out.print("\t Nombre del/la alumno/a "+i+": ");
+			arrayNotasAlumnos[i][0] = sc.nextLine();
+			
+			System.out.print("\t Nota media de los examenes del/la alumno/a "+i+": ");
+			arrayNotasAlumnos[i][1] = sc.nextLine();
+			
+			System.out.print("\t Nota media de los trabajos del alumno "+i+": ");
+			arrayNotasAlumnos[i][2] = sc.nextLine();
+			
+			System.out.print("\t Nota de la actitud del/la alumno/a "+i+": ");
+			arrayNotasAlumnos[i][3] = sc.nextLine();
+			System.out.println("===============================================\n");
+		}
+		
+		for(int i = 0; i < arrayNotasAlumnos.length; i++){
+			nota1 = Float.parseFloat(arrayNotasAlumnos[i][1]);
+			nota2 = Float.parseFloat(arrayNotasAlumnos[i][2]);
+			nota3 = Float.parseFloat(arrayNotasAlumnos[i][3]);
+			media = ((nota1*50) + (nota2*40) + (nota3*10))/100;
+			System.out.println("El alumno "+arrayNotasAlumnos[i][0]+" tiene una media de " +media);
+		}	
+	}
+}
